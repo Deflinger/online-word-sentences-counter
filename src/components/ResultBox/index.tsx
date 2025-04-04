@@ -32,6 +32,7 @@ const ResultBox = () => {
     //const sentences = text?.split(/[.!?]+/).filter(s => s.trim().length > 0).length || 0;
     //const paragraphs = text.trim().split(/\n{2,}/).filter(Boolean).length;
     //const pronounsCount = words.filter(word => pronounList.includes(word)).length;
+    
     setResultBar([{
       title: 'Words',value: wordCount,},
       {title: 'Characters',value: charCount,},
@@ -47,8 +48,6 @@ const ResultBox = () => {
       {title: 'Paragraphs ',value: countParag(text),},
       {title: 'Pronouns',value: countPronouns(text),},
     ])
-    console.log(resultBar);
-    console.log(countWords)
   },[text]);
 
   if(!text)return null;
